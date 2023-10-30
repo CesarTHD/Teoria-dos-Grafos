@@ -19,13 +19,33 @@ def leArquivo(caminho):
                 else:
                     arestaR.append(int(elementos[i]))
     arquivo.close()
-    return indice, arestaL, arestaR
+    return vertices, arestaL, arestaR
 
+def countArestas(arestasL):
+    qtdArestas = len(arestasL)
+        
+    return qtdArestas
 
+def grauVert(arestasL, arestasR):
+    graus = np.ones(len(arestasL))
 
-indice = 0
-arestasL = []
-arestasR = []
+    for i in range(len(arestasL)):
+        for j in range(len(arestasL)):
+            if(i!=j):
+                if(arestasL[i] == arestasR[j]):
+                    graus[i] += 1
+            
+    graus = [int(valor) for valor in graus]
+    return graus
 
-indice, arestasL, arestasR = leArquivo("grafo.txt")
+def printSaida(vertices, arestasL, arestasR):
+    print("# n = ", vertices)
+    print("# m = ", countArestas(arestasL))
+    graus = grauVert(arestasL, arestasR)
 
+    for i in range(len(arestasL)):
+        print(arestasL[i], " " ,graus[i])
+
+vertices, arestasL, arestasR = leArquivo("grafo.txt")
+
+printSaida(vertices, arestasL, arestasR)
