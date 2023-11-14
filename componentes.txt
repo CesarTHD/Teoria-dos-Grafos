@@ -1,0 +1,6 @@
+Total de componentes: 1
+
+
+Compontente [0] - 5 vertices
+[1, 2, 3, 4, 5]
+Minimo [5] - maximo [5]
