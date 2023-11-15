@@ -1,7 +1,0 @@
-as_graph:
-memória -> 6654,976 MB ou 6654976000 bytes
-tempo -> 2:15  -  2:46
-
-collaboration:
-memoria -> 7158,038528 MB ou 7158038528 bytes
-tempo -> 13:48
